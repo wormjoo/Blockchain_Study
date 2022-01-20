@@ -6,10 +6,13 @@ contract ZombieFactory {
 
     uint dnaDigits = 16;
     uint dnaModulus = 10 ** dnaDigits;
+    uint cooldownTime = 1 days;
 
     struct Zombie {
         string name;
         uint dna;
+        uint32 level;
+        uint32 readyTime;
     }
 
     Zombie[] public zombies;
